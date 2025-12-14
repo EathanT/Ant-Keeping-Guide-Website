@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<section class="row align-items-center mb-5">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="display-5 rainforest-heading">Step into the ant rainforest</h1>
+        <p class="lead">
+            Search care sheets, track nuptial flights, and learn from other keepers in one calm, green place.
+        </p>
+
+        <form action="{% url 'guide:species_list' %}" method="get" class="d-flex mb-3">
+            <input type="text" name="q" class="form-control me-2" placeholder="Search species by name or genus">
+            <button class="btn btn-success">Search</button>
+        </form>
+
+        <div class="d-flex flex-wrap gap-2">
+            <a href="{% url 'guide:species_list' %}?difficulty=easy" class="btn btn-outline-light btn-sm">
+                Beginner species
+            </a>
+            <a href="{% url 'guide:species_list' %}?diapause=none" class="btn btn-outline-light btn-sm">
+                No diapause
+            </a>
+            <a href="{% url 'guide:species_list' %}?region=tropical" class="btn btn-outline-light btn-sm">
+                Tropical
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="ant-hero-card">
+            <div id="ant3d-hero"
+                 data-model-url="{% static 'guide/models/ant.glb' %}"></div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5">
+    <div class="card rainforest-card">
+        <div class="card-body d-flex flex-column flex-md-row align-items-md-center">
+            <div class="me-md-4 mb-3 mb-md-0">
+                <div class="mini-3d-viewer keeper-note-ant">
+    <video class="keeper-note-sprite" autoplay loop muted playsinline>
+        <source src="{% static 'guide/video/ant-walking.webm' %}" type="video/webm">
+        <!-- Fallback image if video is not supported -->
+        <img src="{% static 'guide/img/ant-walking.gif' %}" alt="Walking ant">
+    </video>
+</div>
+            </div>
+            <div>
+                <h2 class="section-heading mb-2">Keeper’s note</h2>
+                <p class="mb-1">
+                    Ants are not just “bugs in a box” here. This guide focuses on real colony needs:
+                    temperature, humidity, founding style, diapause, and long term setups, not just
+                    how to keep a queen alive for a week.
+                </p>
+                <p class="small text-muted mb-0">
+                    Start with a forgiving beginner species, then move toward the escape artists and
+                    stingers once you have solid routines.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ant-trail-divider mb-5">
+    <h2 class="section-heading mb-3">Popular species</h2>
+    <div class="row g-4">
+        {% for species in popular_species %}
+        <div class="col-md-4">
+            <a href="{% url 'guide:species_detail' slug=species.slug %}"
+               class="text-decoration-none text-light">
+                <div class="card rainforest-card h-100 fade-rise">
+                    <span class="card-ant-worker"></span>
+                    {% if species.thumbnail %}
+                    <img src="{{ species.thumbnail.url }}"
+                         class="card-img-top"
+                         alt="{{ species.display_name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ species.display_name }}</h5>
+                        <p class="card-text">
+                            {{ species.get_difficulty_display }} ·
+                            {{ species.get_region_display }} ·
+                            {{ species.get_diapause_display }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% empty %}
+        <p>No species have been added yet.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="ant-trail-divider mb-5">
+    <h2 class="section-heading mb-3">Where to start</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card rainforest-card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">New to ants?</h5>
+                    <p class="card-text">
+                        Start with forgiving species that tolerate mistakes, mild heat swings, and simple setups.
+                    </p>
+                    <a href="{% url 'guide:species_list' %}?difficulty=easy" class="btn btn-success btn-sm">
+                        See beginner species
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card rainforest-card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">No diapause, no fridge</h5>
+                    <p class="card-text">
+                        Tropical and subtropical species that do not need a cold rest, perfect for small apartments.
+                    </p>
+                    <a href="{% url 'guide:species_list' %}?diapause=none" class="btn btn-success btn-sm">
+                        Browse warm species
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card rainforest-card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Already hooked?</h5>
+                    <p class="card-text">
+                        Narrow your next colony by region, founding mode, or difficulty and build a small
+                        collection the right way.
+                    </p>
+                    <a href="{% url 'guide:species_list' %}" class="btn btn-success btn-sm">
+                        Explore all species
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ant-trail-divider row mb-5">
+    <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="section-heading mb-3">Recent nuptial flights</h2>
+        <ul class="list-group rainforest-list">
+            {% for flight in recent_flights %}
+            <li class="list-group-item bg-transparent text-light d-flex justify-content-between align-items-center">
+                <span>
+                    <strong>{{ flight.species.display_name }}</strong> at {{ flight.location_name }}
+                </span>
+                <span class="badge bg-success rounded-pill">{{ flight.date }}</span>
+            </li>
+            {% empty %}
+            <li class="list-group-item bg-transparent text-light">
+                No sightings yet. You can be the first.
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'guide:flights' %}" class="btn btn-outline-light mt-3">
+            View all flights
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <h2 class="section-heading mb-3">Latest forum threads</h2>
+        <ul class="list-group rainforest-list">
+            {% for thread in recent_threads %}
+            <li class="list-group-item bg-transparent text-light">
+                <a href="{% url 'guide:forum_thread' pk=thread.pk %}"
+                   class="text-decoration-none text-light">
+                    <strong>{{ thread.title }}</strong>
+                </a>
+                <div class="small text-muted">
+                    In {{ thread.section.name }} · by {{ thread.author.username }} ·
+                    {{ thread.created_at|date:"M j" }}
+                </div>
+            </li>
+            {% empty %}
+            <li class="list-group-item bg-transparent text-light">
+                No threads yet. Start one and share your experiences.
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'guide:forum_index' %}" class="btn btn-outline-light mt-3">
+            Go to forum
+        </a>
+    </div>
+</section>
+{% endblock %}

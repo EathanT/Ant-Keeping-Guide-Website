@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load guide_extras %}
+{% block title %}Species - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Species index</h1>
+<p class="text-muted">Filter by difficulty, region, diapause, and founding style to find your perfect colony match.</p>
+
+<form method="get" class="row g-2 mb-4 rainforest-filter">
+    <div class="col-md-4">
+        {{ form.q.label_tag }}
+        {{ form.q|add_class:"form-control" }}
+    </div>
+    <div class="col-md-2">
+        {{ form.difficulty.label_tag }}
+        {{ form.difficulty|add_class:"form-select" }}
+    </div>
+    <div class="col-md-2">
+        {{ form.region.label_tag }}
+        {{ form.region|add_class:"form-select" }}
+    </div>
+    <div class="col-md-2">
+        {{ form.founding_mode.label_tag }}
+        {{ form.founding_mode|add_class:"form-select" }}
+    </div>
+    <div class="col-md-2">
+        {{ form.diapause.label_tag }}
+        {{ form.diapause|add_class:"form-select" }}
+    </div>
+    <div class="col-12 mt-2">
+        <button class="btn btn-success me-2" type="submit">Apply filters</button>
+        <a href="{% url 'guide:species_list' %}" class="btn btn-outline-light btn-sm">Clear</a>
+        <a href="{% url 'guide:species_compare' %}" class="btn btn-outline-light btn-sm float-end">Compare tray</a>
+    </div>
+</form>
+
+<div class="row g-4">
+    {% for species in species_list %}
+        <div class="col-md-4">
+            <a href="{% url 'guide:species_detail' slug=species.slug %}" class="text-decoration-none text-light">
+                <div class="card rainforest-card h-100 fade-rise">
+                    {% if species.thumbnail %}
+                        <img src="{{ species.thumbnail.url }}" class="card-img-top" alt="{{ species.display_name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ species.display_name }}</h5>
+                        <p class="card-text small mb-1">{{ species.get_difficulty_display }} · {{ species.get_region_display }}</p>
+                        <p class="card-text small text-muted">
+                            Founding: {{ species.get_founding_mode_display }} · Diapause: {{ species.get_diapause_display }}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% empty %}
+        <p>No species match these filters yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Compare species - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Compare species</h1>
+<p class="text-muted">Line up species side by side to see which care style fits you best.</p>
+
+{% if species_list %}
+    <div class="table-responsive">
+        <table class="table table-dark table-striped table-bordered align-middle rainforest-table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    {% for s in species_list %}
+                        <th>{{ s.display_name }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Difficulty</td>
+                    {% for s in species_list %}
+                        <td>{{ s.get_difficulty_display }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    {% for s in species_list %}
+                        <td>{{ s.get_region_display }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Diapause</td>
+                    {% for s in species_list %}
+                        <td>{{ s.get_diapause_display }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Founding mode</td>
+                    {% for s in species_list %}
+                        <td>{{ s.get_founding_mode_display }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Temperature range</td>
+                    {% for s in species_list %}
+                        {% with care=s.care_safe %}
+                            <td>
+                                {% if care %}
+                                    {{ care.temperature_min_c }} to {{ care.temperature_max_c }} C
+                                {% else %}
+                                    Not set
+                                {% endif %}
+                            </td>
+                        {% endwith %}
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td>Humidity range</td>
+                    {% for s in species_list %}
+                        {% with care=s.care_safe %}
+                            <td>
+                                {% if care %}
+                                    {{ care.humidity_min }} to {{ care.humidity_max }} percent
+                                {% else %}
+                                    Not set
+                                {% endif %}
+                            </td>
+                        {% endwith %}
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form action="{% url 'guide:clear_compare' %}" method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-light">Clear tray</button>
+    </form>
+{% else %}
+    <p>You have not added any species to your compare tray yet.</p>
+{% endif %}
+{% endblock %}

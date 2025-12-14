@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Vendors - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Vendors</h1>
+<p class="text-muted">Places to find formicariums, tools, heating, and legal queen ant sellers. Always follow your local laws.</p>
+
+{% for category, vendors in categories.items %}
+    <h3 class="mt-4">{{ category|title }}</h3>
+    <div class="row g-3">
+        {% for vendor in vendors %}
+            <div class="col-md-4">
+                <div class="card rainforest-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ vendor.name }}</h5>
+                        <p class="card-text small">{{ vendor.description }}</p>
+                        {% if vendor.region %}
+                            <p class="small text-muted">Region: {{ vendor.region }}</p>
+                        {% endif %}
+                        <a href="{{ vendor.url }}" target="_blank" class="btn btn-sm btn-success">Visit store</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% empty %}
+    <p>No vendors added yet.</p>
+{% endfor %}
+{% endblock %}

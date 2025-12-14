@@ -1,0 +1,133 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #020c08;
+    color: #fefefe;
+}
+
+.section-heading {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.rainforest-footer {
+    background: radial-gradient(circle at top, rgba(0, 80, 60, 0.6), transparent 60%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card.rainforest-card {
+    background: rgba(2, 24, 16, 0.96);
+    border: 1px solid rgba(0, 255, 170, 0.15);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out;
+}
+
+.card.rainforest-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 255, 170, 0.35);
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.7);
+}
+
+.rainforest-list .list-group-item {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.rainforest-table {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.fade-rise {
+    opacity: 0;
+    transform: translateY(12px);
+}
+.fade-rise.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.rainforest-form input,
+.rainforest-form select,
+.rainforest-form textarea {
+    background-color: rgba(1, 20, 12, 0.9);
+    border: 1px solid rgba(0, 255, 170, 0.25);
+    color: #fefefe;
+}
+
+.rainforest-form input:focus,
+.rainforest-form select:focus,
+.rainforest-form textarea:focus {
+    border-color: rgba(0, 255, 170, 0.6);
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 170, 0.25);
+}
+
+.rainforest-toast {
+    background-color: rgba(0, 40, 28, 0.95);
+    color: #fefefe;
+    border: 1px solid rgba(0, 255, 170, 0.4);
+}
+
+.rainforest-navbar {
+    background: linear-gradient(90deg, rgba(0, 35, 24, 0.96), rgba(0, 70, 48, 0.96));
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.btn-success {
+    background-color: #00b878;
+    border-color: #00b878;
+}
+
+.btn-success:hover {
+    background-color: #00d48a;
+    border-color: #00d48a;
+}
+
+nav.rainforest-navbar,
+main,
+footer.rainforest-footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Make text inside rainforest cards crisp and readable. */
+.card.rainforest-card,
+.card.rainforest-card .card-title,
+.card.rainforest-card .card-text {
+    color: #fefefe;
+}
+
+    .card.rainforest-card .text-muted {
+        color: rgba(255, 255, 255, 0.72) !important;
+    }
+
+
+
+/* Make helper / muted text on dark forms easier to read. */
+.rainforest-form .form-text,
+.rainforest-form .text-muted {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.rainforest-form .small.text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Try to keep the Join button in the navbar lined up with the other links. */
+.rainforest-navbar .navbar-nav .nav-link,
+.rainforest-navbar .navbar-nav .btn {
+    display: flex;
+    align-items: center;
+}
+
+.rainforest-navbar .navbar-nav .btn {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    margin-left: 0.5rem;
+}
+
+/* Give the Join button a slightly more obvious pill style. */
+.rainforest-navbar .nav-join-btn {
+    border-radius: 999px;
+    font-weight: 600;
+}

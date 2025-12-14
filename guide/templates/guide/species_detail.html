@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% block title %}{{ species.display_name }} - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h1 class="section-heading mb-1">{{ species.display_name }}</h1>
+
+        <!-- Care at a glance strip so you can scan basics quickly -->
+        <div class="card rainforest-card mb-3">
+            <div class="card-body row text-center text-md-start small">
+                <div class="col-6 col-md-3 mb-2 mb-md-0">
+                    <div class="fw-bold text-uppercase text-muted">Difficulty</div>
+                    <div>{{ species.get_difficulty_display }}</div>
+                </div>
+                <div class="col-6 col-md-3 mb-2 mb-md-0">
+                    <div class="fw-bold text-uppercase text-muted">Region</div>
+                    <div>{{ species.get_region_display }}</div>
+                </div>
+                <div class="col-6 col-md-3 mb-2 mb-md-0">
+                    <div class="fw-bold text-uppercase text-muted">Founding</div>
+                    <div>{{ species.get_founding_mode_display }}</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fw-bold text-uppercase text-muted">Diapause</div>
+                    <div>{{ species.get_diapause_display }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            <form action="{% url 'guide:toggle_bookmark' pk=species.pk %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <button class="btn btn-sm {% if is_bookmarked %}btn-outline-light{% else %}btn-success{% endif %}">
+                    {% if is_bookmarked %}Bookmarked{% else %}Bookmark{% endif %}
+                </button>
+            </form>
+            <form action="{% url 'guide:add_to_compare' pk=species.pk %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <button class="btn btn-sm {% if in_compare %}btn-outline-light{% else %}btn-secondary{% endif %}">
+                    {% if in_compare %}In compare tray{% else %}Add to compare{% endif %}
+                </button>
+            </form>
+            <a href="{% url 'guide:care_card' slug=species.slug %}" class="btn btn-sm btn-outline-light">
+                Download care card
+            </a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'guide:suggestion_for_species' species_slug=species.slug %}" class="btn btn-sm btn-outline-light">
+                Suggest edit
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="card rainforest-card mb-4">
+            <div class="card-body">
+                {% if care %}
+                <h5>Temperature and humidity</h5>
+                <p>
+                    {{ care.temperature_min_c }} to {{ care.temperature_max_c }} C ·
+                    {{ care.humidity_min }} to {{ care.humidity_max }} percent RH
+                </p>
+
+                <h5>Diapause notes</h5>
+                <p>{{ care.diapause_notes|linebreaks }}</p>
+
+                <h5>Founding setup</h5>
+                <p>{{ care.founding_setup|linebreaks }}</p>
+
+                <h5>Setups by colony size</h5>
+                <p><strong>Small colony</strong></p>
+                <p>{{ care.small_colony_setup|linebreaks }}</p>
+                <p><strong>Medium colony</strong></p>
+                <p>{{ care.medium_colony_setup|linebreaks }}</p>
+                <p><strong>Large colony</strong></p>
+                <p>{{ care.large_colony_setup|linebreaks }}</p>
+
+                <h5>Diet</h5>
+                <p>{{ care.diet|linebreaks }}</p>
+
+                <h5>Common issues</h5>
+                <p>{{ care.common_issues|linebreaks }}</p>
+                {% else %}
+                <p>Care data has not been added yet. You can help by suggesting a care sheet for this species.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        {% if species.thumbnail or external_image_url %}
+        <div class="card rainforest-card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Species image</h5>
+                {% if species.thumbnail %}
+                    <img src="{{ species.thumbnail.url }}" class="img-fluid rounded mb-2" alt="{{ species.display_name }}">
+                    <p class="small text-muted mb-0">
+                        Local image for {{ species.display_name }}.
+                    </p>
+                {% elif external_image_url %}
+                    <img src="{{ external_image_url }}" class="img-fluid rounded mb-2" alt="{{ species.display_name }} external image">
+                    <p class="small text-muted mb-0">
+                        Image pulled from an external source (AntWeb / Wikipedia).
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card rainforest-card mb-4 ant-3d-panel">
+            <div class="card-body">
+                <h5 class="card-title">Interactive species image</h5>
+                <p class="small text-muted">
+                    This image is pulled automatically from a trusted ant database when available.
+                    Move your cursor or finger to tilt it in 3D.
+                </p>
+                {% if species.thumbnail or external_image_url %}
+                    <div class="mini-3d-viewer">
+                        {% if external_image_url %}
+                            <img src="{{ external_image_url }}"
+                                 alt="{{ species.display_name }} reference image"
+                                 class="mini-3d-image img-fluid rounded">
+                        {% else %}
+                            <img src="{{ species.thumbnail.url }}"
+                                 alt="{{ species.display_name }} reference image"
+                                 class="mini-3d-image img-fluid rounded">
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <p class="small text-muted mb-0">
+                        No external image is available for this species yet.
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if vendors %}
+        <div class="card rainforest-card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Vendor links</h5>
+                <ul class="list-unstyled small">
+                    {% for vendor in vendors %}
+                    <li class="mb-2">
+                        <strong>{{ vendor.name }}</strong><br>
+                        <span class="text-muted">{{ vendor.description }}</span><br>
+                        <a href="{{ vendor.url }}" target="_blank" class="link-light">Visit store</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card rainforest-card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Recent flights for this species</h5>
+                <ul class="list-unstyled small">
+                    {% for flight in flights %}
+                    <li class="mb-1">
+                        {{ flight.date }} · {{ flight.location_name }}
+                    </li>
+                    {% empty %}
+                    <li>No flights logged yet.</li>
+                    {% endfor %}
+                </ul>
+                <a href="{% url 'guide:flights' %}?species={{ species.id }}" class="link-light small">
+                    View all flights
+                </a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="card rainforest-card mb-4">
+    <div class="card-body">
+        <h3 class="card-title mb-3">Forum threads for this species</h3>
+        <ul class="list-group rainforest-list">
+            {% for thread in threads %}
+            <li class="list-group-item bg-transparent text-light">
+                <a href="{% url 'guide:forum_thread' pk=thread.pk %}" class="text-decoration-none text-light">
+                    {{ thread.title }}
+                </a>
+                <div class="small text-muted">
+                    By {{ thread.author.username }} on {{ thread.created_at|date:"M j" }}
+                </div>
+            </li>
+            {% empty %}
+            <li class="list-group-item bg-transparent text-light">
+                No one has posted about this species yet.
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<!-- Keeper experiences card to tie in the forum and show this is a real hobby hub -->
+<div class="card rainforest-card">
+    <div class="card-body">
+        <h3 class="section-heading mb-2">Keeper experiences</h3>
+        <p class="mb-1">
+            Use the forum to share how {{ species.display_name }} behaves in your setup
+            and what has worked for you over time.
+        </p>
+        <p class="small text-muted mb-0">
+            Posts about escapes, feeding tricks, and long term setups help the next keeper avoid the same mistakes.
+        </p>
+    </div>
+</div>
+{% endblock %}

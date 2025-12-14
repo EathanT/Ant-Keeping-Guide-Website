@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Forum - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Forum</h1>
+<p class="text-muted">Share your experiences, ask questions, and help other ant keepers.</p>
+
+<div class="row g-3">
+    {% for section in sections %}
+        <div class="col-md-4">
+            <a href="{% url 'guide:forum_section' slug=section.slug %}" class="text-decoration-none text-light">
+                <div class="card rainforest-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ section.name }}</h5>
+                        <p class="card-text small">{{ section.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% empty %}
+        <p>No sections defined yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

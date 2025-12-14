@@ -1,0 +1,349 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\.gitigonore||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitigonore||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\deploy\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:deploy\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\antkeeping_guide\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:antkeeping_guide\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\rainforest.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\css\\rainforest.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\js\\ant3d.module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\js\\ant3d.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\css\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_detail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\species_detail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\forum_thread.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\forum_thread.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\base.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\base.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\gltfloader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\js\\gltfloader.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\profile.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\img\\parts.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\static\\guide\\img\\parts.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_compare.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\templates\\guide\\species_compare.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:guide\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitigonore",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\.gitigonore",
+              "RelativeDocumentMoniker": ".gitigonore",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\.gitigonore",
+              "RelativeToolTip": ".gitigonore",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-14T21:07:08.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "nginx.conf",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\deploy\\nginx.conf",
+              "RelativeDocumentMoniker": "deploy\\nginx.conf",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\deploy\\nginx.conf",
+              "RelativeToolTip": "deploy\\nginx.conf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-14T21:02:57.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "urls.py",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\urls.py",
+              "RelativeDocumentMoniker": "guide\\urls.py",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\urls.py",
+              "RelativeToolTip": "guide\\urls.py",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-12-14T21:02:31.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "settings.py",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\antkeeping_guide\\settings.py",
+              "RelativeDocumentMoniker": "antkeeping_guide\\settings.py",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\antkeeping_guide\\settings.py",
+              "RelativeToolTip": "antkeeping_guide\\settings.py",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAuwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-12-14T21:01:47.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "views.py",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\views.py",
+              "RelativeDocumentMoniker": "guide\\views.py",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\views.py",
+              "RelativeToolTip": "guide\\views.py",
+              "ViewState": "AgIAAKEBAAAAAAAAAADwv8ABAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-12-14T07:12:10.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ant3d.module.js",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.module.js",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\js\\ant3d.module.js",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.module.js",
+              "RelativeToolTip": "guide\\static\\guide\\js\\ant3d.module.js",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAowLEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-13T07:05:23.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "rainforest.css",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\rainforest.css",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\css\\rainforest.css",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\rainforest.css",
+              "RelativeToolTip": "guide\\static\\guide\\css\\rainforest.css",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T02:15:48.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\main.js",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\js\\main.js",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\main.js",
+              "RelativeToolTip": "guide\\static\\guide\\js\\main.js",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-12T02:16:30.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "gltfloader.js",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\gltfloader.js",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\js\\gltfloader.js",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\gltfloader.js",
+              "RelativeToolTip": "guide\\static\\guide\\js\\gltfloader.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-13T05:21:10.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "forum_thread.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\forum_thread.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\forum_thread.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\forum_thread.html",
+              "RelativeToolTip": "guide\\templates\\guide\\forum_thread.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-14T07:05:20.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "parts.svg",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\img\\parts.svg",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\img\\parts.svg",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\img\\parts.svg",
+              "RelativeToolTip": "guide\\static\\guide\\img\\parts.svg",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATvSURBVEhLtZZrbFRFFMd/d193724ppYUt2NKHtCAPoYCAgiAIKiRKAMGGgJpoKIJfRIh\u002BMX4RY0KsIESIWBLU4gdqVURJNCiIiYQIbWmxIFCQllcLTbul3b37uHP8cLfbhaIhMZ5k7kwmM//fmTMzZy78nyYi2p19ANXV1duBNdhj6K3vbKeUHStWrFh7u8q/WHV1tdyr1dbWSlVVlezZs2f7nToAjjs7Uq3XQyWCUoIohRKFUgqlLCzL4sKFCyxduhSl1JqKiop\u002BkLsCkqEAQlELK1hL7PonWJcnYNYMpvtng9BvYxDzUnJsaWkplmWt2bp1622QfnuQvvoL1/opvlh86Ciwmpk3fC9j0k5iXD\u002BPisZxBl5COcbhcJpE/tzGwei7LFu2jFgsRiQSYdeuXfj9/h2rVq1a2w8w9PWvC4dkDqwoKRz8\u002BJOTspmZuYn7Yrvo/NXJUVlCI3NIHzaFl2cU4HJo3Pg0m9OFVbS0tBCJRIhGoxQUFHD16lXKyso0AFef\u002BDf5gYy0/U/MGlc8vyjINH0FaZ0HuXRsNvVj36bB9RDnW7u5\u002BMdlrnV08/YzY/EMn8/kyZMoKCggbIYxvAbZ2dlUVlYmnXaQCEtWxoDd82Y9OLL0gRbPLH0JaWcPcmz/LDZa77PneAZtLZ3kBdIZPb6QuqCDd75txF38AobPR25uLsUjisnJycHn8yX3JQnIyhr49Oj8QNGCojZXiWMl7voGTtYtILD8Oz5eXkL5omImpFm0NjaT7nEzJGcItW1hmhyTQAQQRFNJ0X6AAT7XosWTXZmPGGWaq\u002Bk0J2unU/LKAfKzfAAMS/fy4rRcOjpvMdDhxuFy4vL7\u002BLLmalII0RIwUKoP5gLIG6RPmZm12fB1HeX0pefZlLWOjo\u002BOEbOslNuqMHx\u002BTCcYbifidnPqyk0QQbC1e09M6gpcAKunHc/LVZ9rLQcncnj6e4z3BuxJ2B9bwAZZEQurB2JKYcUtFKAJaNigfgDpGTOzp2ObETyky74Z\u002B7UO52D55cAJTcVjtncCQiIPiaCUQhA0hIcLM9HEjk6vI/0BodaFzmvtzn3WumibleGJRq1brmhP\u002Bg\u002BvzyUWj9kC9jQk4a0NtEMiCWUbagfptk2WrvZHg2f0rh\u002BtpTfONbcLSvyB/PvY8FUjp64EiSuhJxqn8VoXr\u002B2tZ86WI8z\u002B4AhzPzxCVe2VpKCG1pdiUlcQatHGeAaqytq64DhPO4MG\u002BLy\u002BnKI8Il3dbDx0iRs3ghgeJ\u002BnpaRSOKmbKSAdtN7u41dTE4gnDEsuzxe8aImViZS6MvZq3vjugm/GfTtWpwpwR\u002Bf7sIQMoLBnN/YnTF41btNwMEmxtJ97RzuZnJ\u002BB0aH2B/wdzaA6\u002Bb/uMN5vLn2sbTv1TWueZmusNdZyuOcPvNWc50fAXp\u002BrP09RwjuDFZgbFeviotISigD95AJKU3ip1DzSXvKG5mX95C7I7460jlb6yA1ON1sMzcvxkhm/hvnmd4WIyNcvF\u002BsfyqVg5kbxMOx3climlD5QKuKtVVFQcFxGJREwxI6aYpimmGRYzHBYzHBIzHJZwOCThUEjC4R4JpdQiIuXl5UnCPz04kwE8Hh3do6PrOrruRfd60b0GuteL12vgNQy8Xh9GSp2Yn9Tq9\u002BAA7Ny5c7uIrOm9vUop\u002B5TcpZAQTG0DOzZs2HDvPwH/xf4Gb5LkTqfRE7EAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-12-13T00:50:19.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ant3d.js",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.js",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\js\\ant3d.js",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\js\\ant3d.js",
+              "RelativeToolTip": "guide\\static\\guide\\js\\ant3d.js",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAuwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-12T04:57:24.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "base.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\base.html",
+              "RelativeDocumentMoniker": "guide\\templates\\base.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\base.html",
+              "RelativeToolTip": "guide\\templates\\base.html",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAuwE0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T02:14:09.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "home.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\home.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\home.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\home.html",
+              "RelativeToolTip": "guide\\templates\\guide\\home.html",
+              "ViewState": "AgIAABgAAAAAAAAAAAAewC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T04:55:49.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "base.css",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\base.css",
+              "RelativeDocumentMoniker": "guide\\static\\guide\\css\\base.css",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\static\\guide\\css\\base.css",
+              "RelativeToolTip": "guide\\static\\guide\\css\\base.css",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAvwGMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-12T02:16:06.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "species_detail.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_detail.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\species_detail.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_detail.html",
+              "RelativeToolTip": "guide\\templates\\guide\\species_detail.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T23:54:04.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "species_compare.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_compare.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\species_compare.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\species_compare.html",
+              "RelativeToolTip": "guide\\templates\\guide\\species_compare.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T23:59:51.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "register.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\register.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\register.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\register.html",
+              "RelativeToolTip": "guide\\templates\\guide\\register.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T23:59:50.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "profile.html",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\profile.html",
+              "RelativeDocumentMoniker": "guide\\templates\\guide\\profile.html",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\templates\\guide\\profile.html",
+              "RelativeToolTip": "guide\\templates\\guide\\profile.html",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-12T23:59:46.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "models.py",
+              "DocumentMoniker": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\models.py",
+              "RelativeDocumentMoniker": "guide\\models.py",
+              "ToolTip": "C:\\Users\\Eatha\\Documents\\School\\csci565_fullstack\\assignments\\final\\antkeeping_guide\\guide\\models.py",
+              "RelativeToolTip": "guide\\models.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-12-12T04:55:23.056Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ thread.title }} - Forum - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">{{ thread.title }}</h1>
+<p class="text-muted">
+    In <a href="{% url 'guide:forum_section' slug=thread.section.slug %}" class="link-light">{{ thread.section.name }}</a>
+    {% if thread.species %}· Related species: <a href="{% url 'guide:species_detail' slug=thread.species.slug %}" class="link-light">{{ thread.species.display_name }}</a>{% endif %}
+</p>
+
+<div class="mb-4">
+    {% for post in posts %}
+        <div class="card rainforest-card mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong>{{ post.author.username }}</strong>
+                    <span class="small text-muted">{{ post.created_at|date:"M j, Y H:i" }}</span>
+                </div>
+                <p>{{ post.content|linebreaks }}</p>
+            </div>
+        </div>
+    {% empty %}
+        <p>No posts yet.</p>
+    {% endfor %}
+</div>
+
+{% if post_form %}
+    <div class="card rainforest-card">
+        <div class="card-body">
+            <h5 class="card-title">Reply</h5>
+            <form method="post" class="rainforest-form">
+                {% csrf_token %}
+                {{ post_form.non_field_errors }}
+                {{ post_form.content.errors }}
+                {{ post_form.content }}
+                <button class="btn btn-success mt-3" type="submit">Post reply</button>
+            </form>
+        </div>
+    </div>
+{% elif user.is_authenticated and thread.is_locked %}
+    <p class="text-muted">This thread is locked.</p>
+{% else %}
+    <p class="small text-muted">Log in to reply.</p>
+{% endif %}
+{% endblock %}

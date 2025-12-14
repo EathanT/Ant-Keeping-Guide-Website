@@ -1,0 +1,5 @@
+Django==5.0.4
+gunicorn==22.0.0
+psycopg2==2.9.11
+requests==2.22.0
+reportlab==4.0.8

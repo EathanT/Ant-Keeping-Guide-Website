@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Nuptial flights - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Nuptial flights</h1>
+<p class="text-muted">See where queens have taken to the air recently and add your own sightings.</p>
+
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div id="flight-map" class="flight-map">
+            <div class="flight-map-overlay">Approximate map view for quick orientation only</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <form method="get" class="mb-3">
+            <div class="mb-2">
+                <label for="species" class="form-label">Species</label>
+                <select name="species" id="species" class="form-select">
+                    <option value="">Any</option>
+                    {% for s in species_options %}
+                        <option value="{{ s.id }}" {% if request.GET.species == s.id|stringformat:"s" %}selected{% endif %}>
+                            {{ s.display_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-2">
+                <label for="region" class="form-label">Region text</label>
+                <input type="text" name="region" id="region" value="{{ request.GET.region }}" class="form-control" placeholder="State, country, or local note">
+            </div>
+            <button class="btn btn-success" type="submit">Filter</button>
+            <a href="{% url 'guide:flights' %}" class="btn btn-outline-light btn-sm ms-2">Clear</a>
+        </form>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'guide:flights_add' %}" class="btn btn-outline-light btn-sm">Add sighting</a>
+        {% else %}
+            <p class="small text-muted mt-3">Log in to add your own flight reports.</p>
+        {% endif %}
+    </div>
+</div>
+
+<table class="table table-dark table-striped table-bordered rainforest-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Species</th>
+            <th>Location</th>
+            <th>Region</th>
+            <th>Reporter</th>
+        </tr>
+    </thead>
+    <tbody id="flight-table-body" data-flight-table-body>
+        <tr>
+            <td colspan="5">Loading flights…</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

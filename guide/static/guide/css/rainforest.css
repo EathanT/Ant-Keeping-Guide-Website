@@ -1,0 +1,279 @@
+﻿/* Main rainforest layout */
+
+.rainforest-body {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #020b07;
+}
+
+/* Deep jungle background with ant pattern */
+
+.rainforest-background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background: radial-gradient(circle at 10% 0%, #06442a 0, #000c07 48%, #000000 100%), radial-gradient(circle at 90% 20%, #075033 0, transparent 55%);
+}
+
+
+    /* Deep jungle ant pattern using walk.png instead of parts.svg */
+    .rainforest-background::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("../img/walk.png");
+        background-repeat: repeat;
+        /* scale the sheet so individual ants are small; tweak to taste */
+        background-size: 480px 592px;
+        opacity: 0.22;
+        mix-blend-mode: screen;
+    }
+
+@keyframes ant-background-drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-40px, -20px, 0);
+    }
+}
+
+.rainforest-canopy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48%;
+    background-image: radial-gradient(circle at 15% 0, rgba(0, 220, 130, 0.4), transparent 60%), radial-gradient(circle at 85% 10%, rgba(0, 160, 100, 0.45), transparent 60%);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+}
+
+.rainforest-mist {
+    position: absolute;
+    inset: 20% 0 auto;
+    height: 46%;
+    background: radial-gradient(circle at 15% 40%, rgba(255, 255, 255, 0.12), transparent 60%), radial-gradient(circle at 75% 65%, rgba(255, 255, 255, 0.08), transparent 70%);
+    filter: blur(12px);
+    animation: mist-drift 40s linear infinite alternate;
+}
+
+@keyframes mist-drift {
+    from {
+        transform: translateX(-4%);
+    }
+
+    to {
+        transform: translateX(4%);
+    }
+}
+/* Bottom ant parade that shares the sprite logic with the keeper note */
+
+@keyframes ant-walk-path {
+    0% {
+        transform: translateX(0) scale(0.35) rotate(90deg);
+    }
+
+    100% {
+        transform: translateX(120vw) scale(0.35) rotate(90deg);
+    }
+}
+
+
+/* Logo ant in navbar */
+
+.ant-logo {
+    width: 26px;
+    height: 14px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 20% 30%, #00ffb3, #00b07c 60%), radial-gradient(circle at 80% 70%, #008f63, #003e2b 88%);
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(0, 255, 180, 0.7);
+    animation: ant-pulse 3s ease-in-out infinite;
+}
+
+    .ant-logo::before,
+    .ant-logo::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: linear-gradient(to right, #00ffb3, #005c3f);
+        top: 3px;
+        left: -8px;
+        transform-origin: 100% 50%;
+        border-radius: 999px;
+    }
+
+    .ant-logo::before {
+        transform: rotate(-18deg);
+    }
+
+    .ant-logo::after {
+        top: auto;
+        bottom: 3px;
+        transform: rotate(14deg);
+    }
+
+@keyframes ant-pulse {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 8px rgba(0, 255, 180, 0.7);
+    }
+
+    50% {
+        transform: translateY(-2px);
+        box-shadow: 0 0 16px rgba(0, 255, 180, 0.9);
+    }
+}
+
+/* Hero 3D ant card */
+
+.ant-hero-card {
+    background: radial-gradient(circle at top, rgba(0, 255, 170, 0.12), rgba(0, 0, 0, 0.9));
+    border-radius: 1.5rem;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 900px;
+    border: 1px solid rgba(0, 255, 170, 0.35);
+    box-shadow: 0 28px 40px rgba(0, 0, 0, 0.85);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Three.js renderer will fill this */
+
+#ant3d-hero {
+    width: 100%;
+    height: 260px;
+}
+
+@media (min-width: 992px) {
+    #ant3d-hero {
+        height: 320px;
+    }
+}
+
+/* Mini viewer used on species pages and keeper note */
+
+.mini-3d-viewer {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: radial-gradient(circle at top, rgba(0, 255, 170, 0.10), rgba(0, 0, 0, 0.95));
+    perspective: 600px;
+}
+
+/* Classic mini segmented ant, still used on species detail */
+
+.mini-ant-body {
+    position: relative;
+    height: 60px;
+    transform-style: preserve-3d;
+    transition: transform 260ms ease-out;
+}
+
+.mini-ant-head,
+.mini-ant-thorax,
+.mini-ant-abdomen {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 20%, #f5f5f5, transparent 55%), radial-gradient(circle at 60% 80%, rgba(0, 0, 0, 0.75), #1b1108 72%);
+}
+
+.mini-ant-head {
+    left: 2px;
+    width: 40px;
+    height: 30px;
+}
+
+.mini-ant-thorax {
+    left: 52px;
+    width: 50px;
+    height: 36px;
+}
+
+.mini-ant-abdomen {
+    left: 110px;
+    width: 62px;
+    height: 42px;
+}
+
+/* Keeper’s note: centered sprite using the walk.png sheet */
+
+.keeper-note-ant {
+    max-width: 180px;
+    padding: 1.25rem;
+    margin: 0 auto;
+    background: radial-gradient(circle at top, rgba(0, 255, 170, 0.20), rgba(0, 0, 0, 0.95));
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This is the sprite window: 200×250 tile from walk.png, scaled down.
+   Frame stepping is handled by JS (see section 4). */
+
+.keeper-note-sprite {
+    display: block;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9));
+}
+
+#ant-scout-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0; /* stays in the background like you want */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+    #ant-scout-layer .ant-scout {
+        position: absolute;
+        width: 64px;
+        height: auto;
+        opacity: 0.9;
+        transform-origin: center center;
+        will-change: transform;
+        cursor: pointer;
+        pointer-events: auto; /* the ants themselves can still be "hit" */
+    }
+
+        #ant-scout-layer .ant-scout.ant-is-dragging {
+            cursor: grabbing;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+        }
+
+
+@keyframes ant-scout-float {
+    0% {
+        transform: translate3d(0, 110vh, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3d(0, -130vh, 0) rotate(0deg);
+    }
+}
+
+/* Image-based mini 3D viewer on species detail: tiltable external photo */
+.mini-3d-viewer .mini-3d-image {
+    display: block;
+    width: 100%;
+    border-radius: 0.9rem;
+    transform-style: preserve-3d;
+    transition: transform 260ms ease-out, box-shadow 260ms ease-out;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.85);
+}

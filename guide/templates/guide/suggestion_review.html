@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Review suggestion - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Review suggestion</h1>
+
+<div class="card rainforest-card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Proposed species</h5>
+        <p><strong>{{ suggestion.proposed_genus }} {{ suggestion.proposed_species }}</strong></p>
+        <p>Common name: {{ suggestion.proposed_common_name }}</p>
+        <p>Status: {{ suggestion.get_status_display }}</p>
+        <p>Submitted at: {{ suggestion.created_at|date:"M j, Y H:i" }}</p>
+    </div>
+</div>
+
+<div class="card rainforest-card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Care notes</h5>
+        <p>{{ suggestion.care_notes|linebreaks }}</p>
+    </div>
+</div>
+
+<div class="card rainforest-card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">Reason</h5>
+        <p>{{ suggestion.reason|linebreaks }}</p>
+    </div>
+</div>
+
+<form method="post" class="d-flex gap-2">
+    {% csrf_token %}
+    <button class="btn btn-success" type="submit" name="action" value="approve">Approve</button>
+    <button class="btn btn-outline-light" type="submit" name="action" value="reject">Reject</button>
+    <a href="{% url 'guide:suggestion_list' %}" class="btn btn-outline-light ms-auto">Back</a>
+</form>
+{% endblock %}

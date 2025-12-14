@@ -1,0 +1,17 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.log
+db.sqlite3
+
+# Virtualenv
+.venv/
+
+# Static build output
+staticfiles/
+media/
+
+# VS / editor junk
+.vs/
+.idea/
+*.swp

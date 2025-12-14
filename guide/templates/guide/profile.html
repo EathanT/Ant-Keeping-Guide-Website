@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Profile - Ant Keeping Guide{% endblock %}
+
+{% block content %}
+<h1 class="section-heading mb-3">Your profile</h1>
+
+<div class="row mb-4">
+    <div class="col-md-5">
+        <div class="card rainforest-card">
+            <div class="card-body">
+                <h5 class="card-title">Profile settings</h5>
+                <form method="post" class="rainforest-form">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="mb-3">
+                            <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.help_text %}
+                                <div class="form-text text-muted">{{ field.help_text }}</div>
+                            {% endif %}
+                            {% for error in field.errors %}
+                                <div class="text-danger small">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                    <button class="btn btn-success" type="submit">Save profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="card rainforest-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Bookmarked species</h5>
+                <ul class="list-unstyled small mb-0">
+                    {% for bookmark in bookmarks %}
+                        <li><a href="{% url 'guide:species_detail' slug=bookmark.species.slug %}" class="link-light">{{ bookmark.species.display_name }}</a></li>
+                    {% empty %}
+                        <li>No bookmarks yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="card rainforest-card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Your nuptial flights</h5>
+                <ul class="list-unstyled small mb-0">
+                    {% for flight in flights %}
+                        <li>{{ flight.date }} · {{ flight.species.display_name }} at {{ flight.location_name }}</li>
+                    {% empty %}
+                        <li>No flights logged yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="card rainforest-card">
+            <div class="card-body">
+                <h5 class="card-title">Your forum posts</h5>
+                <ul class="list-unstyled small mb-0">
+                    {% for post in posts %}
+                        <li>
+                            <a href="{% url 'guide:forum_thread' pk=post.thread.pk %}" class="link-light">{{ post.thread.title }}</a>
+                            <span class="text-muted">· {{ post.created_at|date:"M j" }}</span>
+                        </li>
+                    {% empty %}
+                        <li>No posts yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
